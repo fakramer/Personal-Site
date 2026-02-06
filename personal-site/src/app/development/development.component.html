@@ -1,4 +1,25 @@
 <app-navbar />
 <div class="container">
-    <h1>Hambone</h1>
+    <h1>Experience</h1>
+    <div class="experience">
+        @for (job of experience.getByJob(); track job.id) {
+            <div class="card">
+                <div class="card-header">
+                    <span>{{ job.title }}</span>
+                    <span class="float-end">{{ job.start.toLocaleDateString() }} to {{ job.end?.toLocaleDateString() ?? "present" }}</span>
+                </div>
+                <div class="card-body">
+                    <div class="company-info">
+                        <img src="{{ job.icon }}" alt="company icon" class="company-icon" />
+                        <span>{{ job.company }}</span>
+                        <div class="location">
+                            <span class="officeLocation">{{ job.officeLocation }}</span>
+                            <br>
+                            <span class="type">{{ job.type }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>
