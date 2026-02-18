@@ -29,3 +29,22 @@ jobs:
       - name: Build
         working-directory: ./personal-site
         run: npm run build -- --configuration production
+
+      - name: Deploy
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          DEPLOY_TARGET: ${{ secrets.DEPLOY_TARGET }}
+        working-directory: ./personal-site
+        run: |
+          # Write key to temporary file.
+          echo "$SSH_PRIVATE_KEY" > key.pem
+          chmod 600 key.pem
+
+          # Copy files
+          scp -i key.pem \
+            -o StrictHostKeyChecking=no \
+            -r dist/personal-site/* \
+            "$DEPLOY_TARGET"
+
+          # Clean up
+          rm key.pem
