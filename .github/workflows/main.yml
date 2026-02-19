@@ -29,9 +29,9 @@ jobs:
       - name: Build
         working-directory: ./personal-site
         run: |
-          ng build
-          --base-href /Personal-Site/ \
-          --configuration production
+          npm run build -- \
+          --base-href=/Personal-Site/ \
+          --configuration=production
 
       - name: Deploy
         env:
