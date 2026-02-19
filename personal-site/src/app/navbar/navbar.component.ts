@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   template: `
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" routerLink="#">
+        <a class="navbar-brand" routerLink="/">
           <img class="shield" src="assets/coat-of-arms.svg" alt="coat of arms" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
