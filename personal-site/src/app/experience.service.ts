@@ -8,7 +8,7 @@ import { Project } from './models/project';
 })
 export class ExperienceService {
   private techs: Tech[] = [
-    { id: "git", name: "Git", icon: '/assets/icons/git.svg' },
+    { id: "git", name: "Git", icon: 'assets/icons/git.svg' },
   ];
 
   private projects: Project[] = [
@@ -23,7 +23,7 @@ export class ExperienceService {
   private jobs: Job[] = [
     {
       id: 'cpf-pa',
-      icon: '/assets/icons/charlotte-pipe.png',
+      icon: 'assets/icons/charlotte-pipe.png',
       company: "Charlotte Pipe & Foundry Company",
       officeLocation: "Oakboro, NC",
       type: "On-site",
@@ -32,7 +32,7 @@ export class ExperienceService {
     },
     {
       id: 'ci-fs',
-      icon: '/assets/icons/corning-incorporated.png',
+      icon: 'assets/icons/corning-incorporated.png',
       company: 'Corning Incorporated',
       officeLocation: "Montreal, QC",
       type: "Remote",
@@ -42,7 +42,7 @@ export class ExperienceService {
     },
     {
       id: 'ci-sde',
-      icon: '/assets/icons/corning-incorporated.png',
+      icon: 'assets/icons/corning-incorporated.png',
       company: 'Corning Incorporated',
       officeLocation: "Painted Post, NY",
       type: "On-site",
@@ -52,7 +52,7 @@ export class ExperienceService {
     },
     {
       id: 'ci-ee',
-      icon: '/assets/icons/corning-incorporated.png',
+      icon: 'assets/icons/corning-incorporated.png',
       company: 'Corning Incorporated',
       officeLocation: "Painted Post, NY",
       type: "On-site",
