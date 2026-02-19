@@ -28,7 +28,10 @@ jobs:
 
       - name: Build
         working-directory: ./personal-site
-        run: npm run build -- --configuration production
+        run: |
+          npm run build \
+          --base-href /Personal-Site/ \
+          --configuration production
 
       - name: Deploy
         env:
@@ -41,9 +44,10 @@ jobs:
           chmod 600 key.pem
 
           # Copy files
-          scp -i key.pem \
+          scp -r \
+            -i key.pem \
             -o StrictHostKeyChecking=no \
-            -r dist/personal-site/* \
+            dist/personal-site/* \
             "$DEPLOY_TARGET"
 
           # Clean up
