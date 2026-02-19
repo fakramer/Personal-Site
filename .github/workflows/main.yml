@@ -47,7 +47,7 @@ jobs:
           scp -r \
             -i key.pem \
             -o StrictHostKeyChecking=no \
-            dist/personal-site/* \
+            dist/personal-site/browser/* \
             "$DEPLOY_TARGET"
 
           # Clean up
