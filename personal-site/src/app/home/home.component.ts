@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { ChatPaneComponent } from '../chat-pane/chat-pane.component';
 
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent],
+  imports: [ChatPaneComponent, NavbarComponent],
   template: `
     <app-navbar />
     <div class="container">
@@ -46,6 +47,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
         </button>
       </div>
     </div>
+    <app-chat-pane />
   `,
   styleUrl: './home.component.scss'
 })
